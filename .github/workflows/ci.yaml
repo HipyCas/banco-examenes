@@ -1,0 +1,16 @@
+name: LaTeX to HTML
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  build_all_latex:
+    runs-on: ubuntu-latest
+    uses: actions/checkout@v2
+    run:
+      - apt install pandoc
+      - echo hi
+      - pandoc './prueba.tex' -f latex -t html -o prueba.html --katex
