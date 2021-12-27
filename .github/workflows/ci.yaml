@@ -9,8 +9,22 @@ on:
 jobs:
   build_all_latex:
     runs-on: ubuntu-latest
-    uses: actions/checkout@v2
-    run:
-      - apt install pandoc
-      - echo hi
-      - pandoc './prueba.tex' -f latex -t html -o prueba.html --katex
+    container: pandoc/latex
+    steps:
+      - name: Setup repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2 # To retrieve the preceding commit for changed files
+      - name: List all changed files
+        run: |
+          for file in `find -name '*.tex' -type f`; do
+            echo -e "\x1b[1mCompiling $file\x1b[0m"
+            pandoc "./${file}" -f latex -t html --katex
+          done
+      - name: Get files changed
+        if: ${{ !env.ACT }}
+        run: git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep .tex
+      # - run: git add prueba.html
+      # - run: git commit -m "Compile prueba.html"
+      # - run: git push
+      # TODO https://github.community/t/find-what-files-changed-in-a-pushed-commit/17037 <- Maybe in GitHub works?
