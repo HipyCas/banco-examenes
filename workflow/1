@@ -1,0 +1,4 @@
+for file in `find -name '*.tex' -type f`; do
+  echo -e "\x1b[1mCompiling $file\x1b[0m"
+  pandoc "./${file}" -f latex -t html --katex
+done

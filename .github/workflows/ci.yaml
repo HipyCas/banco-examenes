@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     container: pandoc/latex
     steps:
+      # TODO Igual puedes hacerlo de tal forma que ejecute en pandoc/latex solo la parte de pasar a html, y la que es pillar los archivos cambiados en normal
       - name: Setup repo
         uses: actions/checkout@v2
         with:
@@ -21,6 +22,7 @@ jobs:
             echo -e "\x1b[1mCompiling $file\x1b[0m"
             pandoc "./${file}" -f latex -t html --katex
           done
+      - run: pwd
       - name: Push HTML back to repo
         uses: actions-x/commit@v2
         with:
