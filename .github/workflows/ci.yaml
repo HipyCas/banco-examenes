@@ -31,10 +31,7 @@ jobs:
         uses: docker://pandoc/latex
         with:
           args: |
-            /bin/sh -c "for file in $FILES; do
-            echo -e '\x1b[1mCompiling' $file '\x1b[0m'
-            pandoc ./${file} -f latex -o ./${file}.html -t html --katex || echo -e '\x1b[31mError while compiling' $file '\x1b[0m'
-            done"
+            /bin/sh -c ./compile.sh
       - name: Push HTML back to repo
         if: ${{ !env.ACT }}
         uses: actions-x/commit@v2
