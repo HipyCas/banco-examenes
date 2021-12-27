@@ -1,0 +1,55 @@
+\documentclass[fleqn]{article}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{mathexam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+\ExamClass{Topología I}
+\ExamName{AMAT}
+\ExamHead{19 de enero de 2021}
+
+\let\ds\displaystyle
+
+\begin{document}
+\ExamInstrBox{Profesor
+  \\ \\
+  Ordinario
+  \\ \\
+  Este examen pertenece al Banco de Exámanes de la Asociación de Estudiantes de Matemáticas de la Universidad de Granada. Si bien su autoría corresponde a los profesores ya citados, en la asociación nos encargamos de almacenarlos y ceder su uso a los estudiantes para que sea más satisfactoria su labor a la hora de preparar un examen.}
+
+\begin{enumerate}
+
+  \item Para cada $\alpha \in \mathbb{R}$ denotamos $R_\alpha = \{(x, y) \in \mathbb{R}^2 / y = \alpha\}$. Se considera la topología $\mathcal{T}$ en $\mathbb{R}^2$ con base $\mathcal{B} = \{R_\alpha / \alpha \in \mathbb{R}\}$.
+
+        \begin{enumerate}
+          \item Comparar $\mathcal{T}$ con la topología usual $\mathcal{T}_u$.
+          \item ¿Es $(\mathbb{R}^2, \mathcal{T})$ un espacio de Hausdorff?
+          \item Calcular el cierre, el interior y la frontera de los ejes de coordenados.
+          \item ¿Es cierto que todo conjunto acotado en $\mathbb{R}^2$ tiene interior vacío?
+          \item Construir explícitamente un homeomorfismo $f : (\mathbb{R}^2, \mathcal{T}) \longrightarrow (\mathbb{R}^2, \mathcal{T}')$, donde $\mathcal{T}'$ es la topología en $\mathbb{R}^2$ con base $\mathcal{B}' = \{R_\alpha' / \alpha \in \mathbb{R}\}$ (aquí $R_\alpha' = \{(x, y) \in \mathbb{R}^2 / x = \alpha\}$).
+          \item Probar que $A \subset \mathbb{R}^2$ es conexo en $(\mathbb{R}^2, \mathcal{T})$ si y sólo si existe $\alpha \in \mathbb{R}$ tal que $A \subset R_\alpha$. Determinar las componentes conexas de $(\mathbb{R}^2, \mathcal{T})$.
+          \item Caracterizar los compactos de $(\mathbb{R}^2, \mathcal{T})$.
+        \end{enumerate}
+
+  \item Sea $f : (X, \mathcal{T}) \longrightarrow (Y, \mathcal{T}')$ una identificación. Probar que:
+
+        \begin{enumerate}
+          \item $h : (Y, \mathcal{T}') \longrightarrow (Z, \mathcal{T}'')$ es identificación si y solo si $h \circ f$ es identificación.
+          \item Existe una relación de equivalencia $R$ en $X$ tal que el espacio cociente $(X/R, \mathcal{T}/R)$ es homeomorfo a $(Y, \mathcal{T}')$.
+        \end{enumerate}
+
+  \item Estudiar de forma razonada las siguientes cuestiones:
+
+        \begin{enumerate}
+          \item ¿Es cierto que la topología inducida en un subconjunto finito siempre es la discreta? ¿Y si el espacio es metrizable?
+          \item Sea $(\mathbb{R}^2, \mathcal{T})$ el espacio topológico producto de dos rectas de Sorgenfrey $(\mathbb{R}, \mathcal{T}_S)$. Definimos $f : (\mathbb{R}^2, \mathcal{T}) \longrightarrow (\mathbb{R}, \mathcal{T})$ como $f(x, y) = (x -y^3)$. Analizar si $f$ es continua, abierta o cerrada.
+          \item Una aplicación $f : (X, \mathcal{T}) \longrightarrow (Y, \mathcal{T}')$ es \textit{propia} si para cada $C'$ compacto en $(Y, \mathcal{T}')$ se verifica que $f^{-1}(C')$ es compacto en $(X, \mathcal{T})$. Probar que si $f$ es propia, con $(X, \mathcal{T})$ Hausdorff e $(Y, \mathcal{T}')$ compacto, entonces $f$ es continua.
+        \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
