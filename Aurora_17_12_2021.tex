@@ -1,0 +1,147 @@
+\documentclass[fleqn]{article}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{mathexam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+\ExamClass{EDIP}
+\ExamName{AMAT}
+\ExamHead{17 de diciembre de 2021}
+
+\let\ds\displaystyle
+
+\begin{document}
+\ExamInstrBox{Nombre Apellido Apellido
+  \ \
+  Parcial
+  \ \
+  Este examen pertenece al Banco de Exámanes de la Asociación de Estudiantes de Matemáticas de la Universidad de Granada. Si bien su autoría corresponde a los profesores ya citados, en la asociación nos encargamos de almacenarlos y ceder su uso a los estudiantes para que sea más satisfactoria su labor a la hora de preparar un examen.}
+
+\begin{enumerate}
+
+  \item Sea $(\Omega, \mathcal{A}, P)$ un espacio de probabilidad aleatorio y $X : \Omega \to \mathbb{R}$. Marcar la afirmación correcta:
+
+        \begin{enumerate}
+          \item Ninguna de las otras respuestas es correcta.
+          \item Si $X$ es variable aleatoria y $P_X$ es su distribución de probabilidad, entonces la distribución de probabilidad de $Y = X - 1$ satisface
+                $P_Y((a, b)) = P_X((-\infty, b + 1)) - 1 + P_X([a + 1, +\infty))$
+          \item Si $\Omega = [-1, 1]$ y $\mathcal{A} = \{\emptyset, \Omega, (-1, 1), \{-1, 1\}\}$, la función $X(\omega) = |\omega|, \forall\omega \in \Omega$, es variable aleatoria sobre $(\Omega, \mathcal{A}, P)$.
+          \item Si $X$ es variable aleatoria y $F_X$ es su función de distribución, entonces \linebreak
+                $P(a < X \le b) = F_X(b^-) - F_X(a^-) + P(X = b)$.
+        \end{enumerate}
+
+  \item Marca la afirmación correcta:
+
+        \begin{enumerate}
+          \item Si $E[X] = 1/4$ la función generatriz de momentos de $X$ es $M_X(t) = \frac{p}{1 - (1 - p)e^t},\ t < -\ln{1 - p}$, entonces $p = 0.2$.
+          \item Ninguna de las otras afirmaciones es correcta.
+          \item Si $X$ es una variable aleatoria cuya función de distribución satisface $F_X(x) = x + 1, -1 \le x \le 0$, entonces su función generatriz de momentos vale $M_X(t) = (1 - e^t)/t,\ t \in \mathbb{R}$.
+          \item Si la función generatriz de momentos de $X$ es $M_X(t) = (p + 0.1e^t)^6,\ t \in \mathbb{R}$, entonces $E[X] = 6p$.
+        \end{enumerate}
+
+  \item Sea $X$ una variable aleatoria simétrica tal que el tercer cuartil es 3.5, el rango intercuartílico es 2 y el coeficiente de variación $1/5$. Marcar la afirmación correcta:
+
+        \begin{enumerate}
+          \item El rango intercuartílico de la variable tipificada coincide con su varianza.
+          \item $P(X^2 \ge 13) \le 1/2$.
+          \item $P(1 < X < 4) \ge 0.9$.
+          \item $P(-1 < X \le 5) = P(0 < X \le 6)$.
+        \end{enumerate}
+
+  \item Sea $X$ una variable aleatoria con función de distribución que satisface que $F_X(x) = 2x,\ 0 < x < 1/8,\ F_X(x) = 1/2,\ 1/8 \le x < 3/4\ \text{y}\ F_X(x) = \frac{2x + 1}{3},\ 3/4 \le x < 1$. Señalar la afirmación correcta:
+
+        \begin{enumerate}
+          \item $P\left(X = \frac{1}{8}\ \text{ó}\ X > \frac{3}{4}\right) = \frac{5}{12}$.
+          \item La función de densidad se anula en el intervalo $(1/8,\ 3/4)$.
+          \item $P(8X = 1) < P\left(\frac{1}{8} \le X < \frac{3}{4}\right)$.
+          \item $P(4X \ge 3) = \frac{1}{6}$.
+        \end{enumerate}
+
+  \item Sea $X$ una variable continua con función de densidad $f_X(x) = 3x,\ 1/\sqrt{3} < x < 1$. ¿Cuál de las siguientes afirmaciones es correcta?:
+
+        \begin{enumerate}
+          \item La función de densidad de $Y = X^2/2$ es constante en el recinto $1/6 < y < 1/2$.
+          \item La función de densidad de $Y = \sqrt{3}X$ es $f_Y(y) = y/\sqrt{3}$, $1 < y < \sqrt{3}$.
+          \item Ninguna de las otras respuestas es correcta.
+          \item La función de densidad de $Y = 1/X$ es $f_Y(y) = 3/y^3$, $1/\sqrt{3} < y < 1$.
+        \end{enumerate}
+
+  \item Sea $(\Omega, \mathcal{A}, P)$ un espacio de probabilidad arbitrario y $X : \Omega \to \mathbb{R}$. Marcar la afirmación correcta:
+
+        \begin{enumerate}
+          \item Si $X$ es variable aleatoria y $P_X$ es su distribución de probabilidad, entonces la distribución de probabilidad de $Y = X/2$ satisface $P_Y((a, b)) = 1 - P_X((2b, +\infty)) - P_X((-\infty, 2a])$.
+          \item Si $X$ es variable aleatoria y $F_X$ es su función de distribución, entonces $P(a \le X \le b) = F_X(b) - F_X(a) - P(X = a)$.
+          \item Si $\Omega = \{-2, -1, 0, 1\}$ y $\mathcal{A} = \{\emptyset, \Omega, \{-1, 1\}, \{-2, 0\}\}$, la función $X(\omega) = |\omega|,\ \forall\omega \in \Omega$ es variable aleatoria sobre $(\Omega, \mathcal{A}, P)$.
+          \item Si $\mathcal{A}'$ es un $\sigma$-álgebra tal que $\mathcal{A}' \subset \mathcal{A}$ y $\{X > x\} \in \mathcal{A}'$, $\forall x \in \mathbb{R}$, entonces $X$ es variable aleatoria sobre $(\Omega, \mathcal{A}, P)$.
+        \end{enumerate}
+
+  \item Marcar la afirmación correcta:
+
+        \begin{enumerate}
+          \item Ninguna de las otras afirmaciones es correcta.
+          \item Si $X$ es una variable aleatoria cuya función de distribución satisface $F_X(x) = x + 1$, $-1 \le x \le 0$, entonces su función generatriz de momentos vale $M_X(t) = (e^t - 1)/t$, $t \in \mathbb{R}$.
+          \item Si la función generatriz de momentos de $X$ es $M_X(t) = \frac{0.3}{1 - pe^t}$, $t < -\ln{p}$, entonces $E[X] = 3/7$.
+          \item Si $M_X(t) = ((1 - p)e^t + p)^5$, $t \in \mathbb{R}$ y $Var[X] = 1.25$, entonces $E[X] = 2.5$.
+        \end{enumerate}
+
+  \item Sea $X$ una variable aleatoria con función de distribución que satisface que $F_X(x) = x/8,\ 0 < x < 1/2$ y $F_X(x) = \frac{2x + 1}{3},\ 1/2 \le x < 1$. Señalar la afirmación correcta:
+
+        \begin{enumerate}
+          \item La función de densidad de $X$ vale $f_X(x) = 1/8$ para $0 < x , 1/2$ y $f_X(x) = 2/3$ para $1/2 \le x < 1$.
+          \item $P(X \ge \frac{1}{2}) < P(X \le \frac{1}{2})$.
+          \item $P(X \le \frac{1}{2}) + P(X \ge \frac{1}{2}) = \frac{77}{48}$.
+          \item $P(X = \frac{1}{2}) = P(X = \frac{1}{4})$.
+        \end{enumerate}
+
+  \item Sea $X$ una variable aleatoria cuya única mediana es $1.5$ , verificando que el valor tipificado de $x = 2.5$ es 1/3. Marcar la afirmación correcta:
+
+        \begin{enumerate}
+          \item $P(1.5 - 2k < X < 1.5 + 2k) \ge \frac{9}{4k^2}$
+          \item $P(1 < X < 2) - P(X = 1.5) = 2P(1 < X < 1.5)$.
+          \item Si el tercer cuartil de $X$ vale 2, el rango intercuartílico de la variable tipificada es $3$.
+          \item El coeficiente de variación de $Y = X + E[X]$ es menor que 1.
+        \end{enumerate}
+
+  \item  Sea $X$ una variable aleatoria con función de distribución que satisface que $F_X(x) = 3x,\ 0 < x < 1/8$, $F_X = 1/2,\ 1/8 \le x < 1/4$ y $F_X(x) = \frac{x + 1}{2},\ 1/4 \le x < 1$. Señalar la afirmación correcta:
+
+        \begin{enumerate}
+          \item $P(8X = 1) = P(4X = 1)$.
+          \item $P(\frac{1}{8} \le X < \frac{1}{4}) > P(X = \frac{1}{8})$.
+          \item Ni la mediana ni el tercer cuartil son únicos.
+          \item $P(X \ge \frac{1}{4}) > P(X < \frac{1}{4})$.
+        \end{enumerate}
+
+  \item Sea X una variable aleatoria simétrica, bimodal, con modas 3 y 5, y coeficiente cde variación 1/2. Marcar la afirmación correcta:
+
+        \begin{enumerate}
+          \item Si el rango intercuartílico de $X$ vale 2, el tercer cuartil de la variable tipificada es 0.5.
+          \item $P(|\frac{2X - 8}{3}| \ge 4) \le \frac{1}{18}$.
+          \item Las dos modas son también medianas.
+          \item Las dos modas de la variable tipificada son -1 y 1.
+        \end{enumerate}
+
+  \item Marcar la afirmación correcta:
+
+        \begin{enumerate}
+          \item Si la función generatriz de momentos de $X$ es $M_X(t) = \frac{0.25}{1 - ae^t},\ t < -\ln{a}$, entonces $E[X] = 4a$.
+          \item Ninguna de las otras afirmaciones es correcta.
+          \item Si $X$ es una variable aleatoria cuya función de distribución satisface $F_X(x) = (x + 1)/2,\ -1 \le x \le 1$, entonces su función generatriz de momentos vale $M_X(t) = (e^t - e^{-t})/t,\ t \in \mathbb{R}$.
+          \item Si la función generatriz de momentos de $X$ es $M_X(t) = (0.8 + be^t)^n,\ t \in \mathbb{R}$, y $E[X] = 2.8$, entonces $n = 15$.
+        \end{enumerate}
+
+  \item Sea $(\Omega, \mathcal{A}, P)$ un espacio de probabilidad arbitrario y $X : \Omega \to \mathbb{R}$. Marcar la afirmación correcta:
+
+        \begin{enumerate}
+          \item Si $\Omega = [-2, 2]$ y $\mathcal{A} = \{\emptyset, \Omega, \{0\}, [-2, 0) \cup (0,2]\}$, la función $X(\omega) = \omega^2,\ \forall\omega \in \Omega$, es variable aleatoria sobre $(\Omega, \mathcal{A}, P)$.
+          \item Ninguna de las otras respuestas es correcta.
+          \item Si $X$ es variable aleatoria y $F_X$ es su función de distribución, entonces $P(a < X < b) = F_X(b) - F_X(a^-) - P(X = b)$.
+          \item Si $X$ es variable aleatoria y $P_X$ es su distribución de probabilidad, entonces la distribución de probabilidad de $Y = X + 1$ satisface $P_Y([a,b)) = P_X((-\infty, b-1)) - 1 + P_X((a - 1, +\infty))$.
+        \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
